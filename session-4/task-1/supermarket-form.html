@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supermarket Form</title>
+  </head>
+  <body>
+    <h1>Supermarket Loyalty Card</h1>
+    <form id="library-form" action="">
+      <p>Sign up for your loyalty card</p>
+      <label for="name">Name</label><br />
+      <input type="text" name="name" /><br />
+      <fieldset>
+        <legend>Address</legend>
+        <label for="address-1">Address Line 1:</label><br />
+        <input type="text" name="address-1" /><br />
+        <label for="address-2">Address Line 2:</label><br />
+        <input type="text" name="address-2" /><br />
+        <label for="town-city">Town / City:</label><br />
+        <input type="text" name="town-city" /><br />
+        <label for="postcode">Postcode:</label><br />
+        <input type="text" name="postcode" /><br />
+      </fieldset>
+      <label for="phone">Phone</label><br />
+      <input type="tel" name="phone" /><br />
+      <label for="email">Email</label><br />
+      <input type="email" name="email" /><br />
+      <fieldset>
+        <legend>How would you like to receive vouchers and offers?</legend>
+        <label for="voucher-method-post">Post</label>
+        <input
+          type="radio"
+          name="voucher-method"
+          id="voucher-method-post"
+          value="post"
+          checked
+        /><br />
+        <label for="voucher-method-email">Email</label>
+        <input
+          type="radio"
+          name="voucher-method"
+          id="voucher-method-email"
+          value="email"
+        />
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
