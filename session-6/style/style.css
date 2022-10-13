@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+img {
+  display: block;
+  /* allow images to shrink to column width:  */
+  max-width: 100%;
+}
+
+h1,
+h2,
+li {
+  text-align: center;
+}
+
+p {
+  max-width: 80ch;
+}
+
+/* not sure if this is needed */
+.wrapper {
+  max-width: 100vw;
+}
+
+.banner {
+  height: 80vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-image: url("../img/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 100px;
+  margin: 0;
+}
+
+nav {
+  height: 25px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 25px;
+  padding: 0;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  margin-top: 80px;
+}
+
+.container {
+  margin-inline: auto;
+  padding-inline: 100px;
+  max-width: 1600px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 50px;
+  margin-block: 30px;
+}
+
+.col {
+  /* smallest image is 700px wide; */
+  max-width: 700px;
+  flex: 1;
+}
+
+.testimonials {
+  padding-block: 50px;
+}
+
+.testimonials ul {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  gap: 100px;
+}
