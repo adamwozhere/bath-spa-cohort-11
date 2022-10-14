@@ -24,12 +24,14 @@ p {
 }
 
 /* not sure if this is needed */
-.wrapper {
+#wrapper {
   max-width: 100vw;
 }
 
 .banner {
-  height: 80vh;
+  /* height: 80vh; */
+  /* Changed to 40vh for better layout in side-by-side screenshot of the web page and vscode */
+  height: 40vh;
   width: 100%;
   display: grid;
   place-items: center;
