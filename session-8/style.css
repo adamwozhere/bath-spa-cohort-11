@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-gap: 16px;
+  aspect-ratio: 1;
+}
+
+/* yellow */
+.img-1 {
+  grid-area: 7 / 3 / 12 / 8;
+}
+
+/* purple */
+.img-2 {
+  grid-area: 9 / 8 / 11 / 10;
+}
+
+/* blue */
+.img-3 {
+  grid-area: 5 / 8 / 9 / 12;
+}
+
+/* pink */
+.img-4 {
+  grid-area: 5 / 6 / 7 / 8;
+}
+
+/* green */
+.img-5 {
+  grid-area: 2 / 6 / 6 / 9;
+}
+
+/* orange */
+.img-6 {
+  grid-area: 3 / 2 / 7 / 6;
+}
