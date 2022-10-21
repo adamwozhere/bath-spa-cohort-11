@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.625rem;
+  color: hsl(206, 23%, 62%);
+  background-image: url(../img/img.png), url(../img/background.png);
+  background-repeat: no-repeat;
+  background-size: 90vh, cover;
+  background-position: bottom right -60px, top left;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.container {
+  padding-inline: 50px;
+  margin-inline: auto;
+}
+
+.push-right {
+  margin-left: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-block: 50px;
+}
+
+.header ul {
+  list-style: none;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  margin: 0;
+  margin-left: 7rem;
+  padding-bottom: 12px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: hsl(206, 23%, 62%);
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.main {
+  flex: 1;
+}
+
+.main-content {
+  margin-left: 14rem;
+  margin-top: 10rem;
+}
+
+h3 {
+  font-size: 2.625rem;
+  color: hsl(230, 47%, 26%);
+  max-width: 17ch;
+  margin-top: 1.5em;
+}
+
+.social {
+  order: -1;
+  height: 100vh;
+  padding-inline: 2rem;
+}
+
+.social ul {
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social a:hover {
+  opacity: 0.5;
+}
+
+.button {
+  display: inline-block;
+  color: white;
+  font-size: 2.25rem;
+  text-decoration: none;
+  background: linear-gradient(
+    90deg,
+    hsl(214, 100%, 80%) 0%,
+    hsl(325, 95%, 76%) 100%
+  );
+  padding: 0.5em 1em;
+  border-radius: 8px;
+}
+
+.button:hover {
+  opacity: 0.5;
+}
+
+.button-prev-next {
+  display: inline-block;
+  margin-left: 6rem;
+  margin-top: 3rem;
+  width: 64px;
+  height: 64px;
+}
+
+.button-prev-next:hover {
+  opacity: 0.5;
+}
+
+.button-cart {
+  flex-shrink: 0;
+}
+
+.button-cart:hover {
+  opacity: 0.5;
+}
