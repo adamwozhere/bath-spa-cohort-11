@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <title>JavaScript Intro</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>JavaScript Intro</h1>
+      <div class="">
+        <h2>Simple Alert</h2>
+        <p>Simple alert using inline js</p>
+        <pre>onclick="alert('hello!');"</pre>
+        <button onclick="alert('hello!');">Hello</button>
+      </div>
+
+      <div class="">
+        <h2>Change text</h2>
+        <p id="change-text">Click the button to change the text.</p>
+        <input type="button" value="Change" onclick="changeText()" />
+      </div>
+
+      <div class="">
+        <h2>Simple Lightbulb</h2>
+        <input type="button" value="Turn On" onclick="turnOn()" />
+        <img src="img/pic_bulboff.gif" alt="" id="lightbulb" />
+        <input type="button" value="Turn Off" onclick="turnOff()" />
+      </div>
+    </div>
+  </body>
+</html>

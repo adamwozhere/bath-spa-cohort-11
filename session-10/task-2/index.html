@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+    <title>BMI Calculator</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h3>BMI Calculator</h3>
+      <fieldset>
+        <legend>Height</legend>
+        <div class="input-group">
+          <label for="height-cm">cm</label>
+          <input type="number" name="height" id="height-cm" />
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Weight</legend>
+        <div class="input-group">
+          <label for="weight-kg">kg</label>
+          <input type="number" name="weight" id="weight-kg" />
+        </div>
+      </fieldset>
+      <div class="input-group">
+        <input
+          type="button"
+          value="Calculate BMI"
+          id="calculate-btn"
+          onclick="calculateBMI();"
+        />
+      </div>
+
+      <div class="input-group output">
+        <span id="output-bmi">0</span>
+        <p id="output-msg">
+          Enter a your height and weight then press Calculate BMI
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
