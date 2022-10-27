@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eeefec;
+  color: #24254d;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: 'lato', sans-serif;
+  text-align: center;
+  font-size: 42px;
+}
+
+.text-hal {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: #131592;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#header {
+  background-color: #191b16;
+  padding: 16px;
+  line-height: 1;
+}
+
+main {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.text-red {
+  color: red;
+}
+
+.text-large {
+  font-size: 70px;
+}
+
+.text-yellow {
+  color: #f4e800;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+#submit-btn {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: red;
+  font-size: 20px;
+}
+
+form label {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+}
+
+/* Drag and Drop functionality */
+
+.media {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 800px;
+  height: 400px;
+  margin-top: 4rem;
+  background-color: white;
+  border: 3px solid gray;
+  padding: 1rem;
+  padding-inline: 5rem;
+}
+
+.media img {
+  border: 3px solid transparent;
+}
+
+.hide {
+  display: none;
+}
+
+.media .drag-over {
+  border: 3px dashed red;
+}

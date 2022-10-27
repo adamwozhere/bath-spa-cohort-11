@@ -10,17 +10,20 @@
   </head>
   <body>
     <div class="wrapper">
-      <form action="" onsubmit="event.preventDefault()">
+      <form action="" id="shopping-form">
         <h1>Shopping list</h1>
-        <div>
-          <label for="shopping-item">Item</label>
+        <p>
+          Type in an item to add it to your list.<br />
+          Click the 'x' next to an item to delete.
+        </p>
+        <div class="row">
           <input
             type="text"
             name="shopping-item"
-            placeholder="bananas"
+            placeholder="item"
             id="shopping-item"
           />
-          <input type="submit" value="Add" id="add-btn" onclick="addItem();" />
+          <button type="submit" id="add-btn">Add</button>
         </div>
         <div>
           <ul id="shopping-list"></ul>
