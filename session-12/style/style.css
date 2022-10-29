@@ -16,6 +16,15 @@ h1 {
   font-size: 42px;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-height: 100%;
+}
+
 .text-hal {
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
@@ -71,6 +80,25 @@ a {
   font-weight: bold;
 }
 
+.row {
+  display: flex;
+  gap: 4px;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.align-end {
+  align-items: end;
+}
 /* Drag and Drop functionality */
 
 .media {
@@ -88,13 +116,97 @@ a {
 }
 
 .media img {
-  border: 3px solid transparent;
+  /* border: 3px solid transparent; */
+}
+.media * {
+  box-sizing: content-box;
 }
 
 .hide {
-  display: none;
+  opacity: 0;
 }
 
-.media .drag-over {
-  border: 3px dashed red;
+.drag-over {
+  border: 3px dotted red;
+}
+
+.draggable {
+  cursor: move;
+}
+
+.dropped {
+  user-select: none;
+  cursor: default;
+}
+
+.droppable {
+  border: 3px dotted grey;
+  height: 250px;
+  width: 150px;
+}
+
+/* stop drop target image from being able to drag over itself */
+.no-pointers {
+  pointer-events: none;
+}
+
+.img-you {
+  background: url(../img/you.png) no-repeat center;
+}
+
+/* new */
+
+.drop-target {
+  border: 3px dotted grey;
+  height: 100px;
+  width: 100px;
+}
+.drop-target.drag-over {
+  border: 3px dotted red;
+}
+
+/* BUILD ROCKET  drag-drop styles */
+.drop-target[data-drop-target='booster'] {
+  width: 55px;
+  height: 200px;
+}
+.drop-target[data-drop-target='rocket'] {
+  width: 75px;
+  height: 250px;
+}
+.drop-target[data-drop-target='capsule'] {
+  width: 75px;
+  height: 100px;
+}
+
+#rocket-target {
+  gap: 4px;
+}
+
+.rocket-complete [data-drop-target='capsule'] {
+  transform: translateY(25px);
+  /* transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1); */
+  transition: transform 0.5s cubic-bezier(0.93, -0.2, 0.59, 1.27);
+}
+
+.rocket-complete [data-drop-target='booster'] {
+  transform: translateX(30px);
+  /* transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1); */
+  transition: transform 0.5s cubic-bezier(0.93, -0.2, 0.59, 1.27);
+}
+
+.rocket-complete :last-child [data-drop-target='booster'] {
+  transform: translateX(-30px);
+  /* transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1); */
+  transition: transform 0.5s cubic-bezier(0.93, -0.2, 0.59, 1.27);
+}
+
+.noselect {
+  -webkit-touch-callout: none !important;
+  -webkit-user-select: none !important;
+  -webkit-user-drag: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
 }

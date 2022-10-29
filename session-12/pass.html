@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
+    <script src="js/script.js" defer></script>
     <title>Super Cool Space Adventure Game</title>
   </head>
   <body>
@@ -18,11 +19,20 @@
     <main>
       <div class="media">
         <div class="">
-          <img src="img/spacesuit.png" id="spacesuit" dragable="true" alt="" />
+          <img
+            src="img/spacesuit.png"
+            id="spacesuit"
+            class="draggable"
+            alt=""
+            draggable="true"
+          />
         </div>
-        <div class="" id="drag-target" data-drop-target>
-          <img src="img/you.png" class="no-pointers" alt="" />
-        </div>
+        <div
+          class="droppable img-you"
+          id="drag-target"
+          data-draggable-id="spacesuit"
+          data-drop-img="you-spacesuit"
+        ></div>
       </div>
       <h2 class="text-hal">Congratulations!</h2>
       <p id="success-msg"></p>
@@ -36,60 +46,5 @@
         </li>
       </ul>
     </main>
-    <script>
-      const suit = document.getElementById('spacesuit');
-      suit.addEventListener('dragstart', function (e) {
-        e.dataTransfer.setData('id', e.target.id);
-        setTimeout(function () {
-          e.target.classList.add('hide');
-        }, 0);
-      });
-
-      suit.addEventListener('dragend', function (e) {
-        console.log('unhide');
-        suit.classList.remove('hide');
-      });
-
-      const dragTarget = document.getElementById('drag-target');
-      dragTarget.addEventListener('dragenter', dragOn);
-      dragTarget.addEventListener('dragover', dragOn);
-      dragTarget.addEventListener('dragleave', dragOff);
-      dragTarget.addEventListener('drop', drop);
-
-      function dragOn(e) {
-        e.preventDefault();
-        const dragable = e.dataTransfer.getData('id');
-        console.log('dragable' + '->');
-        console.log(e.dataTransfer.getData('id'));
-        e.target.classList.add('drag-over');
-      }
-
-      function dragOff(e) {
-        // const id = e.dataTransfer.getData('text/plain');
-        e.target.classList.remove('drag-over');
-      }
-
-      function drop(e) {
-        e.target.classList.remove('drag-over');
-        // console.log(e.target, 'drop');
-
-        const id = e.dataTransfer.getData('id');
-        console.log('drop id', id);
-        const dragable = document.getElementById(id);
-
-        // dragable.classList.remove('hide');
-        if (dragable == suit) {
-          // e.stopPropagation();
-          dragTarget.src = 'img/you-spacesuit.png';
-          success();
-        }
-      }
-
-      function success() {
-        console.log('success!');
-        const msg = document.getElementById('success-msg');
-        msg.innerText = 'Success!';
-      }
-    </script>
   </body>
 </html>
