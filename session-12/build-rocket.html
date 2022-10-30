@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
-    <script src="js/dragDrop.js" defer></script>
+    <link rel="stylesheet" href="style/dragDropPuzzle.css" />
+    <script src="js/dragDropPuzzle.js" defer></script>
     <title>Super Cool Space Adventure Game</title>
   </head>
   <body>
@@ -18,62 +19,63 @@
     </header>
     <main>
       <div class="media">
-        <div class="row align-end">
+        <div>
           <img
-            src="img/rocket-capsule.png"
-            class="draggable"
-            id="capsule"
+            src="img/rocket-booster1.png"
             alt=""
-            draggable="true"
-            data-drag-item="capsule"
+            id="booster1"
+            data-puzzle-piece="booster"
           />
+        </div>
+        <div>
           <img
-            src="img/rocket-booster.png"
+            src="img/rocket-booster2.png"
             alt=""
-            class="draggable"
-            id="booster"
-            draggable="true"
-            data-drag-item="booster"
+            id="booster2"
+            data-puzzle-piece="booster"
           />
-          <img
-            src="img/rocket-booster.png"
-            alt=""
-            class="draggable"
-            id="booster"
-            draggable="true"
-            data-drag-item="booster"
-          />
+        </div>
+
+        <div class="row" id="rocket-target">
+          <div class="col justify-end">
+            <div id="puzzle-goal-booster1" data-puzzle-goal="booster"></div>
+          </div>
+          <div class="col">
+            <div id="puzzle-goal-capsule" data-puzzle-goal="capsule"></div>
+            <div id="puzzle-goal-rocket" data-puzzle-goal="rocket"></div>
+          </div>
+          <div class="col justify-end">
+            <div id="puzzle-goal-booster2" data-puzzle-goal="booster"></div>
+          </div>
+        </div>
+
+        <div>
           <img
             src="img/rocket-main.png"
             alt=""
-            class="draggable"
             id="rocket"
-            draggable="true"
-            data-drag-item="rocket"
+            data-puzzle-piece="rocket"
           />
         </div>
-        <div class="row" id="rocket-target">
-          <div class="col justify-end">
-            <div class="drop-target" data-drop-target="booster"></div>
-          </div>
-          <div class="col">
-            <div class="drop-target" data-drop-target="capsule"></div>
-            <div class="drop-target" data-drop-target="rocket"></div>
-          </div>
-          <div class="col justify-end">
-            <div class="drop-target" data-drop-target="booster"></div>
-          </div>
+        <div>
+          <img
+            src="img/rocket-capsule.png"
+            id="capsule"
+            alt=""
+            data-puzzle-piece="capsule"
+          />
         </div>
       </div>
-      <!-- <img src="img/build-rocket.png" alt="" /> -->
-      <div class="task" data-task>
+      <!-- task instructions -->
+      <div data-task>
         <h2 class="text-hal">Sounds a bit ambitious</h2>
         <p>
           I'll just wait here while you put those conveniently premade rocket
           parts in the right places.
         </p>
       </div>
-      <div class="success" data-success hidden>
+      <!-- task complete message -->
+      <div data-task-complete hidden>
         <h2 class="text-hal">Wow, you actually did it</h2>
         <p>I guess you better put your seatbelt on. You ready to go?</p>
         <ul>

@@ -1,0 +1,72 @@
+/* BASE STYLES FOR PUZZLE FUNCTIONALITY */
+[data-puzzle-goal],
+[data-puzzle-piece] {
+  box-sizing: content-box;
+  pointer-events: all;
+}
+
+[data-puzzle-goal] {
+  border: 3px dotted grey;
+  /* default size */
+  height: 100px;
+  width: 100px;
+}
+
+[data-puzzle-goal].puzzle-goal-hover {
+  border: 3px solid blue;
+}
+
+.puzzle-hide {
+  opacity: 0;
+}
+
+.puzzle-draggable {
+  cursor: move;
+}
+
+.puzzle-placed {
+  user-select: none;
+  cursor: default;
+}
+
+.puzzle-complete {
+  transition: transform 0.5s cubic-bezier(0.93, -0.2, 0.59, 1.27);
+  border: 3px dotted transparent;
+}
+
+/* SPECIFIC STYLES FOR ROCKET PUZZLE */
+.media {
+  display: grid;
+  grid-template-columns: 1fr 1fr 213px 1fr 1fr;
+  pointer-events: none;
+}
+[data-puzzle-goal='booster'] {
+  width: 55px;
+  height: 200px;
+}
+
+[data-puzzle-goal='rocket'] {
+  width: 75px;
+  height: 250px;
+}
+
+[data-puzzle-goal='capsule'] {
+  width: 75px;
+  height: 100px;
+}
+/* on-complete animations */
+#puzzle-goal-booster1.puzzle-complete {
+  transform: translateX(34px);
+}
+
+#puzzle-goal-booster2.puzzle-complete {
+  transform: translateX(-34px);
+}
+
+#puzzle-goal-capsule.puzzle-complete {
+  transform: translateY(16px);
+}
+
+#puzzle-goal-rocket.puzzle-complete {
+  transform: translateY(-5px);
+}
