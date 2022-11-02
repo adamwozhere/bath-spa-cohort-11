@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #eeefec;
@@ -21,6 +22,9 @@ img {
   display: block;
 }
 
+input[type='submit'] {
+  margin-top: 1rem;
+}
 .container {
   max-height: 100%;
 }
@@ -84,6 +88,7 @@ a {
   display: flex;
   gap: 4px;
 }
+
 .col {
   display: flex;
   flex-direction: column;
@@ -93,28 +98,20 @@ a {
 .justify-start {
   justify-content: flex-start;
 }
+
 .justify-end {
   justify-content: flex-end;
 }
+
 .align-end {
   align-items: end;
 }
-/* Drag and Drop functionality */
 
 .media {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
   width: 800px;
   height: 400px;
   margin-top: 4rem;
   background-color: white;
   border: 3px solid gray;
-  padding: 1rem;
-  padding-inline: 5rem;
-}
-
-.img-you {
-  background: url(../img/you.png) no-repeat center;
 }

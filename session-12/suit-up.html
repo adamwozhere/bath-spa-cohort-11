@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/dragDropPuzzle.css" />
+    <script src="js/dragDropPuzzle.js" defer></script>
+    <title>2022 A Space Odyssey</title>
+  </head>
+  <body>
+    <header id="header">
+      <h1 class="text-yellow">
+        <span class="text-large">2022</span><br />
+        A Space<br />
+        Odyssey
+      </h1>
+    </header>
+    <main>
+      <div class="media suit-puzzle">
+        <div class="grid-col">
+          <div>
+            <img
+              src="img/suit-boots.png"
+              id="suit-boots"
+              alt=""
+              data-puzzle-piece="boots"
+            />
+          </div>
+          <div>
+            <img
+              src="img/suit-body.png"
+              id="suit-body"
+              alt=""
+              data-puzzle-piece="body"
+            />
+          </div>
+          <div>
+            <img
+              src="img/suit-glove.png"
+              id="suit-glove-1"
+              alt=""
+              data-puzzle-piece="glove"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div id="puzzle-goal-glove-1" data-puzzle-goal="glove"></div>
+          </div>
+          <div class="col puzzle-suit-bg">
+            <div
+              id="puzzle-goal-helmet"
+              data-puzzle-goal="helmet"
+              data-goal-img="suit-helmet-complete"
+            ></div>
+            <div id="puzzle-goal-body" data-puzzle-goal="body"></div>
+            <div id="puzzle-goal-boots" data-puzzle-goal="boots"></div>
+          </div>
+          <div class="col">
+            <div id="puzzle-goal-pack" data-puzzle-goal="pack"></div>
+            <div id="puzzle-goal-glove-2" data-puzzle-goal="glove"></div>
+          </div>
+        </div>
+
+        <div class="grid-col">
+          <div>
+            <img
+              src="img/suit-helmet.png"
+              id="suit-helmet"
+              alt=""
+              data-puzzle-piece="helmet"
+            />
+          </div>
+          <div>
+            <img
+              src="img/suit-glove.png"
+              id="suit-glove-2"
+              alt=""
+              data-puzzle-piece="glove"
+            />
+          </div>
+          <div>
+            <img
+              src="img/suit-pack.png"
+              id="suit-pack"
+              alt=""
+              data-puzzle-piece="pack"
+            />
+          </div>
+        </div>
+      </div>
+      <div data-task>
+        <h2 class="text-hal">Suit-up</h2>
+        <p>Right, get your spacesuit on and let's go.</p>
+      </div>
+      <div data-task-complete hidden>
+        <h2 class="text-hal">Perfect fit</h2>
+        <p>Strap yourself in, it's going to be a bumpy ride.</p>
+        <ul>
+          <li>
+            <a href="blastoff.html">Lets go!</a>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>

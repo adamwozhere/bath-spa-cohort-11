@@ -1,4 +1,12 @@
 /* BASE STYLES FOR PUZZLE FUNCTIONALITY */
+.media {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem;
+  padding-inline: 5rem;
+}
 [data-puzzle-goal],
 [data-puzzle-piece] {
   box-sizing: content-box;
@@ -35,14 +43,16 @@
 }
 
 /* SPECIFIC STYLES FOR ROCKET PUZZLE */
-.media {
+.media.rocket-puzzle {
   display: grid;
-  grid-template-columns: 1fr 1fr 213px 1fr 1fr;
+  grid-template-columns: 75px 75px 213px 75px 75px;
   pointer-events: none;
 }
+
 [data-puzzle-goal='booster'] {
   width: 55px;
   height: 200px;
+  z-index: 1;
 }
 
 [data-puzzle-goal='rocket'] {
@@ -53,20 +63,105 @@
 [data-puzzle-goal='capsule'] {
   width: 75px;
   height: 100px;
+  z-index: 1;
 }
 /* on-complete animations */
 #puzzle-goal-booster1.puzzle-complete {
-  transform: translateX(34px);
+  transform: translateX(38px);
 }
 
 #puzzle-goal-booster2.puzzle-complete {
-  transform: translateX(-34px);
+  transform: translateX(-38px);
 }
 
 #puzzle-goal-capsule.puzzle-complete {
-  transform: translateY(16px);
+  transform: translateY(34px);
 }
 
 #puzzle-goal-rocket.puzzle-complete {
   transform: translateY(-5px);
+}
+
+/* SPACESUIT PUZZLE */
+.media.suit-puzzle {
+  display: grid;
+  grid-template-columns: 140px 296px 140px;
+  pointer-events: none;
+}
+
+.grid-col {
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  place-items: center;
+  gap: 1rem;
+}
+
+.puzzle-suit-bg {
+  background-image: url('../img/you-suit.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.puzzle-suit-bg:has(> .puzzle-complete) {
+  background-image: url('../img/suit-shadow.png');
+}
+
+[data-puzzle-goal='helmet'] {
+  width: 140px;
+  height: 120px;
+  z-index: 1;
+}
+
+[data-puzzle-goal='body'] {
+  width: 140px;
+  height: 140px;
+  z-index: 1;
+}
+
+[data-puzzle-goal='boots'] {
+  width: 140px;
+  height: 50px;
+}
+
+[data-puzzle-goal='glove'] {
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+
+[data-puzzle-goal='pack'] {
+  width: 80px;
+  height: 150px;
+  margin-top: 60px;
+}
+
+#puzzle-goal-glove-1 {
+  margin-top: 220px;
+  z-index: 0;
+}
+
+/* on-complete animations */
+#puzzle-goal-helmet.puzzle-complete {
+  transform: translateY(40px);
+}
+
+#puzzle-goal-boots.puzzle-complete {
+  transform: translateY(-30px);
+}
+
+#puzzle-goal-glove-1.puzzle-complete {
+  transform: translate(63px, -15px);
+}
+
+#puzzle-goal-glove-2.puzzle-complete {
+  transform: translate(-73px, -15px);
+}
+
+#puzzle-goal-body.puzzle-complete {
+  z-index: 1;
+}
+
+#puzzle-goal-pack.puzzle-complete {
+  transform: translate(-90px, 40px);
+  opacity: 0.5;
 }
