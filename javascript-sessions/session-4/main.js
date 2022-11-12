@@ -39,7 +39,7 @@ arr.map((value, index) => {
 
 function smallestNumber(arr) {
   let sorted = arr.sort((a, b) => a - b);
-  return sorted[0];
+  return sorted.shift();
 }
 
 console.log('cheapest item is free! You save: ' + smallestNumber(arr));
