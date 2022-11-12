@@ -19,7 +19,7 @@ main {
 }
 
 .container {
-  width: min(600px, 100%);
+  width: min(400px, 100%);
   margin-inline: auto;
 }
 
@@ -29,28 +29,48 @@ button {
   border: 1px solid transparent;
   border-radius: 8px;
   cursor: pointer;
+  transition: all 100ms ease;
 }
 
-button[data-function='operator'] {
-  background-color: hsl(27, 90%, 60%);
+button[data-action='operator'] {
+  /* background-color: hsl(27, 90%, 60%); */
+  background-color: hsl(27, 98%, 67%);
   color: white;
 }
 
-button[data-function='calculate'] {
-  background-color: hsl(118, 98%, 25%);
+button[data-action='calculate'] {
+  /* background-color: hsl(118, 98%, 25%); */
+  background-color: hsl(117, 27%, 50%);
+  color: white;
 }
 
-button[data-function='clear'] {
-  background-color: hsl(1, 100%, 50%);
+button[data-action='clear'] {
+  /* background-color: hsl(1, 100%, 50%); */
+  background-color: hsl(1, 90%, 72%);
+  grid-column: 1 / 2;
+  color: white;
+}
+
+.cell:has(button[data-action='clear']),
+.cell:has(button[data-action='calculate']) {
+  grid-column: span 2;
 }
 
 button:hover {
-  border: 1px solid blue;
+  opacity: 0.5;
+}
+
+.btn-pressed {
+  transform: scale(0.9);
 }
 
 .cell {
   display: flex;
   border-radius: 8px;
+}
+
+.row {
+  display: flex;
 }
 
 #calculator {
@@ -61,12 +81,27 @@ button:hover {
   font-size: 2rem;
 }
 
-.sum {
-  grid-column: 1 / 5;
+.display {
   display: flex;
-  align-items: center;
-  padding-inline: 0.5em;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 0.3rem;
+  grid-column: span 4;
+  grid-row: span 2;
+  padding: 1rem 0.75em;
   font-weight: bold;
   background-color: hsl(244, 15%, 19%);
   color: white;
+}
+
+#sum-display {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#input-display {
+  display: block;
+  font-size: 2.5rem;
 }
