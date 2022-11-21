@@ -1,0 +1,137 @@
+body {
+  overflow-x: hidden;
+  height: 300vh;
+  overflow-y: auto;
+}
+
+.box1 {
+  display: block;
+  width: 30rem;
+  height: 10rem;
+  background-color: aqua;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.box1 h1 {
+  font-size: 3rem;
+}
+
+.box2 {
+  display: flex;
+  width: 59%;
+
+  background-color: chartreuse;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.box2 h1 {
+  font-size: 3rem;
+}
+
+.box3 {
+  display: block;
+  width: 30em;
+  height: 10em;
+  background-color: rgb(224, 82, 82);
+  overflow: hidden;
+}
+
+.box3 h1 {
+  font-size: 3rem;
+}
+
+/* 900px and above, apply these styles */
+@media screen and (min-width: 900px) {
+  .box1 {
+    background-color: blue;
+    color: azure;
+  }
+}
+
+/* CSS animations */
+#box {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-top: 5em;
+  background-color: red;
+  animation: move 6s infinite;
+  animation-timing-function: ease-in;
+}
+
+@keyframes move {
+  0% {
+    transform: skew(35deg) translate(0, 0);
+  }
+  25% {
+    transform: translate(100px, 0);
+    background-color: aqua;
+  }
+  50% {
+    transform: scale(1.5) translate(100px, 100px);
+    background-color: chartreuse;
+  }
+  75% {
+    transform: translate(0, 100px);
+    background-color: blue;
+  }
+  100% {
+    transform: skew(35deg) translate(0, 0);
+    background-color: red;
+  }
+}
+
+/* class colours from the colour select box in the html */
+.light {
+  background-color: white;
+}
+.dark {
+  background-color: black;
+}
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.yellow {
+  background-color: yellow;
+}
+
+.nav {
+  margin-top: 5rem;
+  position: absolute;
+  width: 20rem;
+  height: 50%;
+  right: -20rem;
+  top: 0rem;
+  background-color: grey;
+}
+
+.nav.active {
+  right: 0;
+  z-index: 1;
+  position: fixed;
+  transition: right 1.5s linear;
+}
+.nav.unActive {
+  position: fixed;
+  transition: right 1.5s linear;
+  right: -20rem;
+}
+.nav .toggle {
+  top: 0.5rem;
+  right: 0rem;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle {
+  position: fixed;
+  width: 4rem;
+  height: 4rem;
+  display: block;
+  margin-top: 0.5rem;
+}

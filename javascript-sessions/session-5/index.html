@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="nav" class="nav">
+      <button onClick="reveal()" class="toggle" id="toggle">
+        <p>Open Menu</p>
+      </button>
+      <ul>
+        <li><a onclick="reveal()">item 1</a></li>
+        <li><a onclick="reveal()">item 2</a></li>
+        <li><a onclick="reveal()">item 3</a></li>
+      </ul>
+    </div>
+    <div class="box1">
+      <h1>I am just a div with some text inside</h1>
+    </div>
+    <div class="box2">
+      <h1>I am just a div with some text inside</h1>
+    </div>
+    <div class="box3">
+      <h1>I am just a div with some text inside</h1>
+    </div>
+    <div id="box"></div>
+    <select
+      onchange="this.parentElement.classList={ } ,this.parentElement.classList.toggle(this.value)"
+    >
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="yellow">Yellow</option>
+    </select>
+  </body>
+</html>
