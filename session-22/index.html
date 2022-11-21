@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Froms and Objects</title>
+  </head>
+  <body>
+    <div class="flex flex-col h-full items-center justify-start mt-10">
+      <h1 class="font-bold text-4xl mb-12">Forms and Objects</h1>
+
+      <!-- item input form -->
+      <form
+        action=""
+        id="user-form"
+        class="block p-6 rounded-lg shadow-lg bg-white max-w-sm mb-12"
+      >
+        <h2 class="font-bold text-xl mb-6">New stock item</h2>
+        <div class="form-group mb-6">
+          <label
+            for="item"
+            class="form-label inline-block uppercase mb-2 text-gray-700 text-sm font-medium"
+            >item</label
+          >
+          <input
+            type="text"
+            name="item"
+            id="item"
+            class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 border border-gray-300 rounded"
+          />
+        </div>
+        <div class="form-group mb-6">
+          <label
+            for="colour"
+            class="form-label inline-block uppercase mb-2 text-gray-700 text-sm font-medium"
+            >colour</label
+          >
+          <input
+            type="text"
+            name="colour"
+            id="colour"
+            class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 border border-gray-300 rounded"
+          />
+        </div>
+        <div class="form-group mb-6">
+          <label
+            for="price"
+            class="form-label inline-block uppercase mb-2 text-gray-700 text-sm font-medium"
+            >price</label
+          >
+          <input
+            type="number"
+            name="price"
+            id="price"
+            class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 border border-gray-300 rounded"
+          />
+        </div>
+        <div class="form-group mb-6">
+          <label
+            for="quantity"
+            class="form-label inline-block uppercase mb-2 text-gray-700 text-sm font-medium"
+            >quantity</label
+          >
+          <input
+            type="number"
+            name="quantity"
+            id="quantity"
+            class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 border border-gray-300 rounded"
+          />
+        </div>
+        <button
+          type="submit"
+          class="bg-blue-600 font-bold text-white px-6 py-3 uppercase rounded text-s hover:bg-blue-700 shadow-md"
+        >
+          Submit
+        </button>
+      </form>
+
+      <!-- table showing the items -->
+      <h2 class="font-bold text-xl mb-6">Stock</h2>
+      <table class="mb-12">
+        <thead class="border-b">
+          <tr>
+            <th
+              scope="col"
+              class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+            >
+              item
+            </th>
+            <th
+              scope="col"
+              class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+            >
+              colour
+            </th>
+            <th
+              scope="col"
+              class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+            >
+              price
+            </th>
+            <th
+              scope="col"
+              class="text-sm font-medium text-gray-900 px-6 py-4 text-left"
+            >
+              quantity
+            </th>
+          </tr>
+        </thead>
+        <tbody id="item-table"></tbody>
+      </table>
+
+      <!-- JS array of item objects -->
+      <h2 class="font-bold text-xl mb-6">Items Array</h2>
+      <pre id="output" class="mb-12"></pre>
+    </div>
+  </body>
+</html>
