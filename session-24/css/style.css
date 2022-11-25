@@ -1,0 +1,101 @@
+:root {
+  --clr-primary-dark: hsl(218, 23%, 16%);
+  --clr-primary-medium: hsl(217, 19%, 24%);
+  --clr-primary-light: hsl(193, 38%, 86%);
+  --clr-accent: hsl(150, 100%, 66%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  padding: 1rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.5rem;
+  color: var(--clr-primary-light);
+  background-color: var(--clr-primary-dark);
+}
+
+h3 {
+  color: var(--clr-accent);
+  text-transform: uppercase;
+  font-size: 0.625rem;
+  letter-spacing: 4px;
+}
+
+.card {
+  max-width: 21.5rem;
+  background-color: var(--clr-primary-medium);
+  padding: 2.5rem 1.5rem 0;
+  margin-top: 7.5rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.container {
+  margin-inline: auto;
+}
+
+#advice-text {
+  margin-top: 1.5rem;
+}
+
+.divider {
+  margin-top: 1.5rem;
+  /* allow divider svg to be cropped in mobile view */
+  display: grid;
+  place-content: center;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#advice-btn {
+  display: block;
+  cursor: pointer;
+  line-height: 0;
+  height: 64px;
+  width: 64px;
+  margin-inline: auto;
+  background-color: var(--clr-accent);
+  border: none;
+  border-radius: 50%;
+  transform: translateY(2rem);
+  transition: box-shadow 100ms ease;
+}
+
+#advice-btn:hover {
+  box-shadow: 0px 0px 40px 0px var(--clr-accent);
+}
+
+/* tablet / desktop */
+@media screen and (min-width: 40em) {
+  body {
+    display: grid;
+    place-content: center;
+    font-size: 1.75rem;
+  }
+
+  .card {
+    margin: 0;
+    max-width: unset;
+    width: 33.75rem;
+    padding: 3rem 2rem 0;
+    border-radius: 16px;
+  }
+
+  #advice-title {
+    font-size: 0.8125rem;
+  }
+
+  #advice-btn {
+    margin-top: 0.5rem;
+  }
+
+  .divider {
+    margin-top: 2.5rem;
+  }
+}
