@@ -1,6 +1,4 @@
-/**
- * TODO: check for win conditions in playerHasWon();
- */
+// Basic tic-tac-toe
 const buttons = document.querySelectorAll('.btn');
 buttons.forEach((b) => {
   b.addEventListener('click', (e) => {
@@ -14,14 +12,14 @@ buttons.forEach((b) => {
 const statusMsg = document.querySelector('#status-msg');
 
 const winConditions = [
-  [1, 2, 3],
-  [4, 5, 6],
-  [7, 8, 9],
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
   [1, 4, 7],
   [2, 5, 8],
-  [3, 6, 9],
-  [1, 5, 9],
-  [3, 5, 7],
+  [0, 4, 8],
+  [6, 4, 2],
 ];
 let board = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 let playerTurn = 1;
@@ -54,9 +52,18 @@ function swapPlayerTurn() {
   statusMsg.textContent = `Player ${playerTurn}'s turn`;
 }
 
+// TODO
 function playerHasWon() {
-  winConditions.forEach((w) => {
-    let win = 0;
-  });
+  for (let condition of winConditions) {
+    let conditionCount = 0;
+    for (let i = 0; i < condition.length; i++) {
+      if (board[condition[i]] === playerTurn) {
+        conditionCount += 1;
+      } else {
+        break;
+      }
+    }
+    if (conditionCount === 3) return true;
+  }
   return false;
 }
