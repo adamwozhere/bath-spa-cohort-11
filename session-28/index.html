@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Restaurant Booking Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Booking Form</h1>
+      <form action="" id="booking-form">
+        <!-- Name -->
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <!-- Date -->
+        <div class="form-group">
+          <label for="booking-date">When would you like to book?</label>
+          <input type="date" name="booking-date" id="booking-date" />
+        </div>
+        <!-- Number of people -->
+        <div class="form-group">
+          <label for="numPeople">How many people?</label>
+          <select name="numPeople" id="numPeople">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="0">Group larger than 10</option>
+          </select>
+        </div>
+        <!-- Telephone -->
+        <div class="form-group">
+          <label for="telephone">Telephone</label>
+          <input type="tel" name="telephone" id="telephone" />
+        </div>
+        <!-- Allergies -->
+        <div class="form-group">
+          <fieldset>
+            <legend>Allergies</legend>
+            <label for="allergy-nuts">Nuts</label>
+            <input
+              type="checkbox"
+              name="allergies"
+              id="allergy-nuts"
+              value="nuts"
+            />
+            <label for="allergy-gluten">Gluten</label>
+            <input
+              type="checkbox"
+              name="allergies"
+              id="allergy-gluten"
+              value="gluten"
+            />
+            <label for="allergy-milk">Milk</label>
+            <input
+              type="checkbox"
+              name="allergies"
+              id="allergy-milk"
+              value="milk"
+            />
+            <label for="allergy-shellfish">Shellfish</label>
+            <input
+              type="checkbox"
+              name="allergies"
+              id="allergy-shellfish"
+              value="shellfish"
+            />
+            <label for="allergy-other">Other (please specify)</label>
+            <input
+              type="checkbox"
+              name="allergies"
+              id="allergy-other"
+              value="other"
+            />
+            <input
+              type="text"
+              name="other-allergy"
+              id="allergy-other-specify"
+              disabled
+            />
+          </fieldset>
+        </div>
+        <!-- Vegan -->
+        <div class="form-group">
+          <label for="vegan">Vegan</label>
+          <input type="checkbox" name="vegan" id="" value="vegan" />
+        </div>
+        <!-- Inside / Outside -->
+        <div class="form-group">
+          <fieldset>
+            <legend>Would you like to sit inside or outside?</legend>
+            <label for="location-inside">Inside</label>
+            <input
+              type="radio"
+              name="location"
+              id="location-inside"
+              value="inside"
+              checked
+            />
+            <label for="loaction-outside">Outside</label>
+            <input
+              type="radio"
+              name="location"
+              id="location-outside"
+              value="ouside"
+            />
+          </fieldset>
+        </div>
+        <!-- Comments -->
+        <div class="form-group">
+          <label for="comments">Additional comments</label>
+          <textarea
+            name="comments"
+            id="comments"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+        <!-- Submit -->
+        <div class="form-group">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
