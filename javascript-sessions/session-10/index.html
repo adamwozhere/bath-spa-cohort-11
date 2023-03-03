@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <title>Document</title>
+    <style>
+      .filtered > *:not(.active) {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JS 10</h1>
+
+    <div>
+      <select id="filter-select">
+        <option>--Select one--</option>
+        <option value="all">All projects</option>
+        <option value="javascript">Javascript</option>
+        <option value="react">React</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+      </select>
+      <ul class="filtered">
+        <li data-search="html css">item 1 (html, css)</li>
+        <li data-search="react html css">item 2 (react, html, css)</li>
+        <li data-search="javascript">item 3 (javascript)</li>
+      </ul>
+    </div>
+  </body>
+</html>
